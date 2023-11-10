@@ -1,15 +1,31 @@
+header{
+  position: absolute;
+  top: 0%;
+  background-color: azure;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-color: rgb(240, 250, 241);
 }
 
 .stick-figure {
   width: 100px;
   height: 200px;
   position: relative;
+  margin-left: 5rem;
+  
 }
 
 .stick-figure div {
@@ -27,7 +43,7 @@ body {
 
 .body {
   width: 20px;
-  height: 80px;
+  height: 85px;
   top: 50px;
   left: 40px;
 }
@@ -42,28 +58,45 @@ body {
 
 .left-arm {
   top: 50px;
-  left: -20px;
+  right: 60px;
   transform: rotate(-30deg);
   transform-origin: top right;
 }
 
 .right-arm {
   top: 50px;
-  right: -20px;
+  left: 60px;
   transform: rotate(30deg);
   transform-origin: top left;
 }
 
 .left-leg {
-  top: 130px;
+  top: 135px;
   left: 50px;
   transform: rotate(-230deg);
   transform-origin: top left;
 }
 
 .right-leg {
-  top: 130px;
+  top: 135px;
   right: 50px;
   transform: rotate(230deg);
   transform-origin: top right;
+}
+
+.slidecontainer {
+  border: 5px solid black;
+  border-radius: 30px;
+  padding: 10px 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  background-color: azure;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  align-items: center;
 }

@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>Body Composition</header>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="110"
+        max="250"
+        value="170"
+        class="slider"
+        id="height"
+      /><br />
+      <p>Value: <span id="heightValue"></span> cm</p>
+      <input
+        type="range"
+        min="10"
+        max="300"
+        value="80"
+        class="slider"
+        id="weight"
+      /><br />
+      <p>Value: <span id="weightValue"></span> Kg</p>
+    </div>
     <div class="stick-figure">
       <div class="head"></div>
       <div class="body"></div>
@@ -15,5 +36,7 @@
       <div class="left-leg leg"></div>
       <div class="right-leg leg"></div>
     </div>
+    <script src="main.js"></script>
+    <footer>Made by Gavin :)</footer>
   </body>
 </html>
