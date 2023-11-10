@@ -38,14 +38,15 @@ body {
   height: 50px;
   border-radius: 50%;
   top: 0;
-  left: 25px;
+  left: 13px;
 }
 
 .body {
-  width: 20px;
+  width: 25px;
   height: 85px;
   top: 50px;
-  left: 40px;
+  left: 25px;
+  
 }
 .arm {
   width: 60px;
@@ -58,28 +59,28 @@ body {
 
 .left-arm {
   top: 50px;
-  right: 60px;
+  right: 70px;
   transform: rotate(-30deg);
   transform-origin: top right;
 }
 
 .right-arm {
   top: 50px;
-  left: 60px;
+  left: 50px;
   transform: rotate(30deg);
   transform-origin: top left;
 }
 
 .left-leg {
   top: 135px;
-  left: 50px;
+  left: 40px;
   transform: rotate(-230deg);
   transform-origin: top left;
 }
 
 .right-leg {
   top: 135px;
-  right: 50px;
+  right: 65px;
   transform: rotate(230deg);
   transform-origin: top right;
 }
@@ -99,4 +100,5 @@ footer {
   justify-content: center;
   height: 5rem;
   align-items: center;
+  
 }

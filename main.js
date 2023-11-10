@@ -46,4 +46,7 @@ let output2 = document.getElementById("weightValue");
 output2.innerHTML = slider2.value;
 slider2.oninput = function () {
   output2.innerHTML = this.value;
+  //slider2.value is the weight in kg
+  body.style.width = slider2.value / 4 + "px";
+  body.style.left = slider2.value /  + "px";
 };
