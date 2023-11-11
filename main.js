@@ -20,6 +20,7 @@ let rightLeg = document.querySelector(".right-leg");
 let leftLeg = document.querySelector(".left-leg");
 let rightArm = document.querySelector(".right-arm");
 let leftArm = document.querySelector(".left-arm");
+let head = document.querySelector(".head");
 
 output.innerHTML = slider.value;
 slider.oninput = function () {
@@ -48,5 +49,5 @@ slider2.oninput = function () {
   output2.innerHTML = this.value;
   //slider2.value is the weight in kg
   body.style.width = slider2.value / 4 + "px";
-  body.style.left = slider2.value /  + "px";
+  body.style.left = 50 - slider2.value / 8 + "px";
 };
