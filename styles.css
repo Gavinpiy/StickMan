@@ -25,7 +25,6 @@ body {
   height: 200px;
   position: relative;
   margin-left: 5rem;
-  border: solid black 5px;
   
 }
 
@@ -46,16 +45,18 @@ body {
   width: 25px;
   height: 85px;
   top: 50px;
-  left: 40%;
-  
+  left: 38%;
+  border-radius: 30%;
 }
 .arm {
   width: 60px;
   height: 13px;
+  border-radius: 30%;
 }
 .leg {
   width: 60px;
   height: 15px;
+  border-radius: 30%;
 }
 
 .left-arm {
