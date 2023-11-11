@@ -1,15 +1,3 @@
-// // Get references to the input elements and stick figure parts
-// const heightInput = document.getElementById("heightInput");
-// const weightInput = document.getElementById("weightInput");
-// const head = document.querySelector(".head");
-// const body = document.querySelector(".body");
-// const arms = document.querySelectorAll(".arm");
-// const legs = document.querySelectorAll(".leg");
-
-// // Event listeners to detect changes in input fields
-// heightInput.addEventListener("input", updateStickFigureSize);
-// weightInput.addEventListener("input", updateStickFigureSize);
-
 let slider = document.getElementById("height");
 let output = document.getElementById("heightValue");
 
