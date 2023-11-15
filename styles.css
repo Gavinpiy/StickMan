@@ -1,4 +1,4 @@
-header{
+header {
   position: absolute;
   top: 0%;
   background-color: azure;
@@ -7,12 +7,16 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 3rem;
 }
-
+.main {
+  display: flex;
+  margin-top: 20px;
+}
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -25,7 +29,6 @@ body {
   height: 200px;
   position: relative;
   margin-left: 5rem;
-  
 }
 
 .stick-figure div {
@@ -102,5 +105,31 @@ footer {
   justify-content: center;
   height: 5rem;
   align-items: center;
-  
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  height: 100px;
+}
+
+.youAre {
+display: flex;
+margin-top: 8rem;
+border: 5px solid black;
+border-radius: 30px;
+  padding: 10px 10px;
+width: 200px;
+height:100px
+}
+
+#chairImage {
+  display: none;
+}
+
+#sausageImage{
+  display: none;
+}
+
+#twigImage{
+  display: none;
 }

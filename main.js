@@ -1,6 +1,5 @@
 let slider = document.getElementById("height");
 let output = document.getElementById("heightValue");
-
 let body = document.querySelector(".body");
 let legs = document.querySelectorAll(".leg");
 let arms = document.querySelectorAll(".arm");
@@ -10,32 +9,75 @@ let rightArm = document.querySelector(".right-arm");
 let leftArm = document.querySelector(".left-arm");
 let head = document.querySelector(".head");
 
-output.innerHTML = slider.value;
-slider.oninput = function () {
-  output.innerHTML = this.value;
-  //slider.value is the value of the slider in cm
-  // console.log(slider.value)
-  body.style.height = slider.value - 80 + "px";
-  rightLeg.style.top = slider.value - 35 + "px";
-  leftLeg.style.top = slider.value - 35 + "px";
-  //This code is using the forEach method to iterate over each element
-  //in the legs NodeList, which contains all the elements with the class "leg."
-  //The forEach method takes a callback function as an argument, and this function
-  //is executed for each element in the NodeList.
+// Set initial value and output
+let heightValue = slider.value;
+output.innerHTML = heightValue;
+
+slider.addEventListener("input", function () {
+  // Update current value and output
+  heightValue = slider.value;
+  output.innerHTML = heightValue;
+  body.style.height = heightValue - 80 + "px";
+  rightLeg.style.top = heightValue - 35 + "px";
+  leftLeg.style.top = heightValue - 35 + "px";
+
+  // Use forEach to iterate over legs and set width
   legs.forEach((leg) => {
-    leg.style.width = this.value / 2.5 + "px";
+    leg.style.width = heightValue / 2.5 + "px";
   });
+
+  // Use forEach to iterate over arms and set width
   arms.forEach((arm) => {
-    arm.style.width = this.value / 3 + "px";
+    arm.style.width = heightValue / 3 + "px";
   });
-};
+  sausagePic();
+  chairPic();
+});
 
 let slider2 = document.getElementById("weight");
 let output2 = document.getElementById("weightValue");
-output2.innerHTML = slider2.value;
-slider2.oninput = function () {
-  output2.innerHTML = this.value;
-  //slider2.value is the weight in kg
-  body.style.width = slider2.value / 4 + "px";
-  body.style.left = 50 - slider2.value / 8 + "px";
-};
+
+// Set initial value and output
+let weightValue = slider2.value;
+output2.innerHTML = weightValue;
+
+slider2.addEventListener("input", function () {
+  // Update current value and output
+  weightValue = slider2.value;
+  output2.innerHTML = weightValue;
+  body.style.width = weightValue / 4 + "px";
+  body.style.left = 50 - weightValue / 8 + "px";
+  sausagePic();
+  chairPic();
+  twigPic()
+});
+
+const sausage = document.getElementById("sausageImage");
+
+function sausagePic() {
+  if (heightValue == 250 && weightValue == 300) {
+    sausage.style.display = "flex";
+  } else {
+    sausage.style.display = "none";
+  }
+}
+
+const chair = document.getElementById("chairImage");
+
+function chairPic() {
+  if (heightValue == 110 && weightValue == 300) {
+    chair.style.display = "flex";
+  } else {
+    chair.style.display = "none";
+  }
+}
+
+const twig = document.getElementById("twigImage");
+
+function twigPic() {
+  if (heightValue == 250 && weightValue == 40 ) {
+    twig.style.display = "flex";
+  } else {
+    twig.style.display = "none";
+  }
+}
