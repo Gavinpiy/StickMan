@@ -8,7 +8,7 @@ let leftLeg = document.querySelector(".left-leg");
 let rightArm = document.querySelector(".right-arm");
 let leftArm = document.querySelector(".left-arm");
 let head = document.querySelector(".head");
-
+const text = document.getElementById("youaretext");
 // Set initial value and output
 let heightValue = slider.value;
 output.innerHTML = heightValue;
@@ -32,6 +32,8 @@ slider.addEventListener("input", function () {
   });
   sausagePic();
   chairPic();
+  twigPic();
+  youAreText();
 });
 
 let slider2 = document.getElementById("weight");
@@ -49,7 +51,8 @@ slider2.addEventListener("input", function () {
   body.style.left = 50 - weightValue / 8 + "px";
   sausagePic();
   chairPic();
-  twigPic()
+  twigPic();
+  youAreText();
 });
 
 const sausage = document.getElementById("sausageImage");
@@ -75,9 +78,25 @@ function chairPic() {
 const twig = document.getElementById("twigImage");
 
 function twigPic() {
-  if (heightValue == 250 && weightValue == 40 ) {
+  if (heightValue == 250 && weightValue == 40) {
     twig.style.display = "flex";
+    // text.innerHTML = "You are a twig";
   } else {
     twig.style.display = "none";
+    // text.innerHTML = "Loading...";
   }
 }
+
+// function youAreText() {
+//   if (heightValue == 170 && weightValue == 80) {
+//     text.innerHTML=("You are an average male")
+//   }
+// }
+function youAreText() {
+  if (heightValue >= 160 && heightValue <= 180 && weightValue >= 70 && weightValue <= 90) {
+    text.innerHTML = "You are an average male";
+  } else {
+    text.innerHTML = "You are a"; // Clear the text if the condition is not met
+  }
+}
+
