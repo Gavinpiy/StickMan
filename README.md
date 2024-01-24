@@ -13,5 +13,5 @@ StickMan is a simple web app built with HTML and CSS. Users can interact with th
 
 ## Screenshots
 
-![StickMan Screenshot 1](./stickman.png)
+![StickMan Screenshot 1](./Stickman.png)
 
